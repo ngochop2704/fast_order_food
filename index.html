@@ -7,6 +7,7 @@
     <title>Fast_Order_Food</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="./assets/css/base.css">
     <link rel="stylesheet" href="./assets/css/main.css">
     <link rel="stylesheet" href="./assets/css/grid.css">
@@ -40,8 +41,8 @@
                                     <span class="bar__menu-product"><i class="bar__menu-product-icon-right fa-solid fa-angle-right"></i></span>
                                 </a>
                             </li>
-                            <li class="bar__menu-item"><a href="#" class="bar__menu-item-link">Tin tức</a></li>
-                            <li class="bar__menu-item"><a href="#" class="bar__menu-item-link">Liên hệ</a></li>
+                            <li class="bar__menu-item"><a href="./pages/news/new_feed.html" class="bar__menu-item-link">Tin tức</a></li>
+                            <li class="bar__menu-item"><a href="./pages/contact/contact.html" class="bar__menu-item-link">Liên hệ</a></li>
                             <li class="bar__menu-item"><a href="#" class="bar__menu-item-link">Sale up 50%</a></li>
                         </ul>
                         <!-- bar__menu-product-list -->
@@ -56,7 +57,7 @@
                             </li>
 
                             <li class="bar__menu-product-item">
-                                <a href="#" class="bar__menu-product-item-link">Rau củ</a>
+                                <a href="./pages/product_group/vegetables/index.html" class="bar__menu-product-item-link">Rau củ</a>
                             </li>
                             <li class="bar__menu-product-item">
                                 <a href="#" class="bar__menu-product-item-link">Hoa quả tươi</a>
@@ -95,7 +96,7 @@
                                             </a>
                                             <ul class="header__options-product">
                                                 <li class="header__product-item">
-                                                    <a href="" class="header__product-link">Rau củ</a>
+                                                    <a href="./pages/product_group/vegetables/index.html" class="header__product-link">Rau củ</a>
                                                 </li>
                                                 <li class="header__product-item">
                                                     <a href="" class="header__product-link">Hoa quả tươi</a>
@@ -109,10 +110,10 @@
                                             </ul>
                                         </li>
                                         <li class="header__nav-item">
-                                            <a href="" class="header__nav-item-link">Tin tức</a>
+                                            <a href="./pages/news/new_feed.html" class="header__nav-item-link">Tin tức</a>
                                         </li>
                                         <li class="header__nav-item">
-                                            <a href="" class="header__nav-item-link">Liên hệ</a>
+                                            <a href="./pages/contact/contact.html" class="header__nav-item-link">Liên hệ</a>
                                         </li>
                                         <li class="header__nav-item">
                                             <a href="" class="header__nav-item-link">Sale up to 50%</a>
@@ -135,8 +136,8 @@
                                         <li class="header__nav-icon">
                                             <a href="" class="header__nav-icon-link user-nav-icon-js"><i class="fa-solid fa-user-plus"></i></a>
                                             <div class="header__user">
-                                                <a href="" class="btn btn--primary login-btn-js">Đăng nhập</a>
-                                                <a href="" class="btn register-btn-js">Đăng ký</a>
+                                                <a href="./pages/user/sign_in.html" class="btn btn--primary login-btn-js">Đăng nhập</a>
+                                                <a href="./pages/user/sign_up.html" class="btn register-btn-js">Đăng ký</a>
                                             </div>
                                         </li>
                                         <li class="header__nav-icon">
@@ -154,112 +155,17 @@
         </div>
     </header>
 
-    <!-- Login and Register transfer -->
-    <div class="auth__form">
-        <!-- ******************* Login Form ******************* -->
-        <div class="login-form">
-            <div class="auth__form-header">
-                <h2 class="auth__form-heading">Đăng nhập tài khoản</h2>
-                <ul class="auth__form-header-list">
-                    <li class="auth__form-header-item">
-                        <a href="" class="auth__form-header-link">Trang chủ</a>
-                        <i class="fa-solid fa-angle-right"></i>
-                    </li>
-                    <li class="auth__form-header-item">
-                        <a href="" class="auth__form-header-link auth__form-header-label">Đăng nhập tài khoản</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="grid__padding grid wide">
-                <div class="auth__form-body">
-                    <h2 class="auth__form-body-heading">Đăng nhập tài khoản</h2>
-                    <div class="auth__form-body-social">
-                        <a href="" class="auth__form-facebook btn">
-                            <i class="auth__form-socials-icon fa-brands fa-facebook-f"></i>
-                            <span class="label-icon">Facebook</span>
-                        </a>
-                        <a href="" class="auth__form-google btn">
-                            <i class="auth__form-socials-icon fa-brands fa-google-plus-g"></i>
-                            <span class="label-icon">Google</span>
-                        </a>
-                    </div>
-                    <ul class="auth__form-body-list">
-                        <li class="auth__form-body-item">
-                            <input type="email" class="auth__form-body-input" placeholder="Email">
-                        </li>
-                        <li class="auth__form-body-item">
-                            <input type="password" class="auth__form-body-input" placeholder="Mật khẩu">
-                        </li>
-                        <li class="auth__form-body-item">
-                            <button class="btn  btn--primary auth__form-body-btn">Đăng nhập</button>
-                        </li>
-                    </ul>
-                </div>
-                <div class="auth__form-footer">
-                    <h3 class="auth__form-footer-forget">Quên mật khẩu?</h3>
-                    <p class="auth__form-footer-remind">
-                        Bạn chưa có tài khoản. Vui lòng đăng nhập <a href="">tại đây</a>.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <!-- ******************* Register Form ******************* -->
-        <div class="register-form">
-            <div class="auth__form-header">
-                <h2 class="auth__form-heading">Đăng ký tài khoản</h2>
-                <ul class="auth__form-header-list">
-                    <li class="auth__form-header-item">
-                        <a href="" class="auth__form-header-link">Trang chủ</a>
-                        <i class="fa-solid fa-angle-right"></i>
-                    </li>
-                    <li class="auth__form-header-item">
-                        <a href="" class="auth__form-header-link auth__form-header-label">Đăng ký tài khoản</a>
-                    </li>
-                </ul>
-            </div>
-            <div class="grid__padding grid wide">
-                <div class="auth__form-body">
-                    <h2 class="auth__form-body-heading">Đăng ký tài khoản</h2>
-                    <div class="auth__form-body-social">
-                        <a href="" class="auth__form-facebook btn">
-                            <i class="auth__form-socials-icon fa-brands fa-facebook-f"></i>
-                            <span class="label-icon">Facebook</span>
-                        </a>
-                        <a href="" class="auth__form-google btn">
-                            <i class="auth__form-socials-icon fa-brands fa-google-plus-g"></i>
-                            <span class="label-icon">Google</span>
-                        </a>
-                    </div>
-                    <ul class="auth__form-body-list">
-                        <li class="auth__form-body-item">
-                            <input type="text" class="auth__form-body-input" placeholder="Họ và tên">
-                        </li>
-                        <li class="auth__form-body-item">
-                            <input type="email" class="auth__form-body-input" placeholder="Địa chỉ Email">
-                        </li>
-                        <li class="auth__form-body-item">
-                            <input type="password" class="auth__form-body-input" placeholder="Mật khẩu">
-                        </li>
-                        <li class="auth__form-body-item">
-                            <input type="password" class="auth__form-body-input" placeholder="Nhập lại mật khẩu">
-                        </li>
-                        <li class="auth__form-body-item">
-                            <button class="btn  btn--primary auth__form-body-btn">Đăng ký</button>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
     <!-- ///////////////////////////////////////////////////////// -->
     <!-- Main app container -->
     <div class="container">
         <!-- Banner Advertisement -->
         <div class="banner">
-            <div class="banner__main" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/bn/t0307_banner2.png);"></div>
+            <div class="slider-wrapper">
+                <div class="slider-main">
+                    <div class="slider-item" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/bn/t0307_banner1.png);"></div>
+                    <div class="slider-item" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/bn/t0307_banner2.png);"></div>
+                </div>
+            </div>
 
             <div class="grid">
                 <div class="row no-gutters">
@@ -317,7 +223,8 @@
                 </div>
             </div>
         </div>
-        <!-- ////////////////////////////////// -->
+        
+        <!-- About us and List product -->
         <div class="grid wide">
             <!-- about Us -->
             <div class="about__us grid__padding">
@@ -327,7 +234,7 @@
                 </header>
                 
                 <div class="grid wide">
-                    <div class="row">
+                    <div class="row about__us-slick-slider">
                         <div class="col l-3 m-6 c-6">
                             <div class="about__us-item">
                                 <div class="about__us-item-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/bn/icon_uti_1.png);"></div>
@@ -378,7 +285,7 @@
 
                     <ul class="header__options-product list__product-classify-on-mobile hide-on-pc-tablet">
                         <li class="header__product-item">
-                            <a href="" class="header__product-link">Rau củ</a>
+                            <a href="./pages/product_group/vegetables/index.html" class="header__product-link">Rau củ</a>
                         </li>
                         <li class="header__product-item">
                             <a href="" class="header__product-link">Hoa quả tươi</a>
@@ -392,7 +299,7 @@
                     </ul>
 
                     <div class="list__product-classify hide-on-mobile">
-                        <a href="" class="btn classify-btn classify-btn--active">Rau củ</a>
+                        <a href="./pages/product_group/vegetables/index.html" class="btn classify-btn classify-btn--active">Rau củ</a>
                         <a href="" class="btn classify-btn">Hoa quả tươi</a>
                         <a href="" class="btn classify-btn">Thực phẩm tươi sống</a>
                         <a href="" class="btn classify-btn">Ngũ cốc</a>
@@ -572,8 +479,8 @@
                 </header>
                 
                 <div class="grid wide">
-                    <div class="row">
-                        <div class="col l-4 m-4 c-12">
+                    <div class="row hot__new-slick-slider">
+                        <div class="col l-4 m-6 c-12">
                             <div class="list__product-item margin_bottom_30px">
                                 <div class="list__product-item-img hot__new-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/art/41968416-280694729439890-8459559393178510661-n.jpg);">
                                     <div class="date__post">
@@ -589,7 +496,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col l-4 m-4 c-12">
+                        <div class="col l-4 m-6 c-12">
                             <div class="list__product-item margin_bottom_30px">
                                 <div class="list__product-item-img hot__new-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/artCT/99041/15_2.jpg);">
                                     <div class="date__post">
@@ -605,7 +512,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col l-4 m-4 c-12">
+                        <div class="col l-4 m-6 c-12">
                             <div class="list__product-item">
                                 <div class="list__product-item-img hot__new-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/art/istock-688005624-1000-plus-copy.jpg);">
                                     <div class="date__post">
@@ -621,6 +528,151 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col l-4 m-6 c-12">
+                            <div class="list__product-item margin_bottom_30px">
+                                <div class="list__product-item-img hot__new-img" style="background-image: url(https://img.cdn.vncdn.io/nvn/ncdn/store2/71503/art/6.jpg);">
+                                    <div class="date__post">
+                                        <i class="fa-solid fa-calendar"></i>
+                                        <b>25-03-2022</b>
+                                            Đăng bởi
+                                        <b>Admin</b>
+                                    </div>
+                                </div>
+                                <div class="list__product-item-content">
+                                    <div class="list__product-item-name hot__new-heading">Organic là gì? Vì sao nên sử dụng thực phẩm hữu cơ?</div>
+                                    <div class="list__product-item-price hot__new-body">Hiện nay, những cửa hàng bán thực phẩm organic mọc lên như nấm. Vậy thực phẩm organic là gì? Và tại sao mọi người có xu hướng sử dụng thực phẩm này?</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-4 m-6 c-12">
+                            <div class="list__product-item margin_bottom_30px">
+                                <div class="list__product-item-img hot__new-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/artCT/99126/17_2.jpg);">
+                                    <div class="date__post">
+                                        <i class="fa-solid fa-calendar"></i>
+                                        <b>24-03-2022</b>
+                                            Đăng bởi
+                                        <b>Admin</b>
+                                    </div>
+                                </div>
+                                <div class="list__product-item-content">
+                                    <div class="list__product-item-name hot__new-heading">Không phải sữa, những thực phẩm này còn giàu Canxi hơn!</div>
+                                    <div class="list__product-item-price hot__new-body">Nếu bạn đã ngao ngán đến việc uống sữa mỗi ngày, thì những thực phẩm như cá hồi, hạt hạnh nhân, các loại đậu,… sẽ giúp bạn bổ sung Canxi đầy đủ.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-4 m-6 c-12">
+                            <div class="list__product-item">
+                                <div class="list__product-item-img hot__new-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/artCT/99008/z3282169757156_c4a11940dac1803d5086bfe978ee5ec2.jpg);">
+                                    <div class="date__post">
+                                        <i class="fa-solid fa-calendar"></i>
+                                        <b>24-03-2022</b>
+                                            Đăng bởi
+                                        <b>Admin</b>
+                                    </div>
+                                </div>
+                                <div class="list__product-item-content">
+                                    <div class="list__product-item-name hot__new-heading">Những lợi ích từ khoai lang bạn cần biết!</div>
+                                    <div class="list__product-item-price hot__new-body">Khoai lang là loại thức ăn dân dã đã có từ lâu đời tại các nước châu Á. Tuy giá thành của loại thực phẩm này không đắt nhưng nó lại mang đến những giá trị dinh dưỡng tuyệt vời. Hãy cùng Farmers Market tìm hiểu xem vì sao khoai lang lại “thần kỳ” đến thế nhé!</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-4 m-6 c-12">
+                            <div class="list__product-item margin_bottom_30px">
+                                <div class="list__product-item-img hot__new-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/art/41968416-280694729439890-8459559393178510661-n.jpg);">
+                                    <div class="date__post">
+                                        <i class="fa-solid fa-calendar"></i>
+                                        <b>25-03-2022</b>
+                                            Đăng bởi
+                                        <b>Admin</b>
+                                    </div>
+                                </div>
+                                <div class="list__product-item-content">
+                                    <div class="list__product-item-name hot__new-heading">Phân biệt các loại dầu ăn hiện nay để đảm bảo sức khỏe cả nhà</div>
+                                    <div class="list__product-item-price hot__new-body">Hiện nay trên thị trường có rất nhiều loại dầu ăn. Vậy bạn có biết cách phân biệt và chọn cho gia đình mình loại dầu tốt cho sức khỏe chưa? Hãy cùng Bách hóa XANH tìm hiểu cách hân biệt các loại dầu ăn ngay sau đây nhé!</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-4 m-6 c-12">
+                            <div class="list__product-item margin_bottom_30px">
+                                <div class="list__product-item-img hot__new-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/artCT/99041/15_2.jpg);">
+                                    <div class="date__post">
+                                        <i class="fa-solid fa-calendar"></i>
+                                        <b>24-03-2022</b>
+                                            Đăng bởi
+                                        <b>Admin</b>
+                                    </div>
+                                </div>
+                                <div class="list__product-item-content">
+                                    <div class="list__product-item-name hot__new-heading">9 lợi ích sức khỏe của nấm bờm sư tử và tác dụng phụ</div>
+                                    <div class="list__product-item-price hot__new-body">Nấm bờm sư tử (còn gọi là nấm hầu thủ hoặc yamabushitake) là loại nấm lớn, có màu trắng và xù xì giống bờm sư tử. Có thể ăn sống, nấu chín, sấy khô hoặc ngâm nấm hầu thủ như một loại trà. Chiết xuất của chúng được sử dụng cho các loại thực phẩm chức năng. Nó có vị giống hải sản (cua hoặc tôm hùm) và chứa nhiều hoạt chất sinh học có tác dụng tốt đối với cơ thể, đặc biệt là não, tim và ruột.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-4 m-6 c-12">
+                            <div class="list__product-item">
+                                <div class="list__product-item-img hot__new-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/art/istock-688005624-1000-plus-copy.jpg);">
+                                    <div class="date__post">
+                                        <i class="fa-solid fa-calendar"></i>
+                                        <b>24-03-2022</b>
+                                            Đăng bởi
+                                        <b>Admin</b>
+                                    </div>
+                                </div>
+                                <div class="list__product-item-content">
+                                    <div class="list__product-item-name hot__new-heading">Calo và chất dinh dưỡng để cung cấp năng lượng cho hoạt động thể thao</div>
+                                    <div class="list__product-item-price hot__new-body">Việc nạp calo và các chất dinh dưỡng đóng vai trò vô cùng quan trọng đối với các hoạt động thể thao và sức khoẻ tổng thể của bạn. Điều này cũng giúp bạn tăng cường hiệu suất tập luyện, đồng thời nâng cao sức đề kháng của mình trước bệnh tật.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-4 m-6 c-12">
+                            <div class="list__product-item margin_bottom_30px">
+                                <div class="list__product-item-img hot__new-img" style="background-image: url(https://img.cdn.vncdn.io/nvn/ncdn/store2/71503/art/6.jpg);">
+                                    <div class="date__post">
+                                        <i class="fa-solid fa-calendar"></i>
+                                        <b>25-03-2022</b>
+                                            Đăng bởi
+                                        <b>Admin</b>
+                                    </div>
+                                </div>
+                                <div class="list__product-item-content">
+                                    <div class="list__product-item-name hot__new-heading">Organic là gì? Vì sao nên sử dụng thực phẩm hữu cơ?</div>
+                                    <div class="list__product-item-price hot__new-body">Hiện nay, những cửa hàng bán thực phẩm organic mọc lên như nấm. Vậy thực phẩm organic là gì? Và tại sao mọi người có xu hướng sử dụng thực phẩm này?</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-4 m-6 c-12">
+                            <div class="list__product-item margin_bottom_30px">
+                                <div class="list__product-item-img hot__new-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/artCT/99126/17_2.jpg);">
+                                    <div class="date__post">
+                                        <i class="fa-solid fa-calendar"></i>
+                                        <b>24-03-2022</b>
+                                            Đăng bởi
+                                        <b>Admin</b>
+                                    </div>
+                                </div>
+                                <div class="list__product-item-content">
+                                    <div class="list__product-item-name hot__new-heading">Không phải sữa, những thực phẩm này còn giàu Canxi hơn!</div>
+                                    <div class="list__product-item-price hot__new-body">Nếu bạn đã ngao ngán đến việc uống sữa mỗi ngày, thì những thực phẩm như cá hồi, hạt hạnh nhân, các loại đậu,… sẽ giúp bạn bổ sung Canxi đầy đủ.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-4 m-6 c-12">
+                            <div class="list__product-item">
+                                <div class="list__product-item-img hot__new-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/artCT/99008/z3282169757156_c4a11940dac1803d5086bfe978ee5ec2.jpg);">
+                                    <div class="date__post">
+                                        <i class="fa-solid fa-calendar"></i>
+                                        <b>24-03-2022</b>
+                                            Đăng bởi
+                                        <b>Admin</b>
+                                    </div>
+                                </div>
+                                <div class="list__product-item-content">
+                                    <div class="list__product-item-name hot__new-heading">Những lợi ích từ khoai lang bạn cần biết!</div>
+                                    <div class="list__product-item-price hot__new-body">Khoai lang là loại thức ăn dân dã đã có từ lâu đời tại các nước châu Á. Tuy giá thành của loại thực phẩm này không đắt nhưng nó lại mang đến những giá trị dinh dưỡng tuyệt vời. Hãy cùng Farmers Market tìm hiểu xem vì sao khoai lang lại “thần kỳ” đến thế nhé!</div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -631,7 +683,130 @@
                 </header>
                 
                 <div class="grid wide">
-                    <div class="row">
+                    <div class="row brand__slick-slider" style="flex-wrap: nowrap;">
+                        <div class="col l-2 m-4 c-4">
+                            <div class="list__product-item top__brand-item">
+                                <div class="list__product-item-img top__brand-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/brand/image_1648056912_512.png);"></div>
+                            </div>
+                        </div>
+                        <div class="col l-2 m-4 c-4">
+                            <div class="list__product-item top__brand-item">
+                                <div class="list__product-item-img top__brand-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/brand/image_1648056901_437.png);"></div>
+                            </div>
+                        </div>
+                        <div class="col l-2 m-4 c-4">
+                            <div class="list__product-item top__brand-item">
+                                <div class="list__product-item-img top__brand-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/brand/image_1648056827_217.png);"></div>
+                            </div>
+                        </div>
+                        <div class="col l-2 m-4 c-4">
+                            <div class="list__product-item top__brand-item">
+                                <div class="list__product-item-img top__brand-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/brand/image_1648056817_528.png);"></div>
+                            </div>
+                        </div>
+                        <div class="col l-2 m-4 c-4">
+                            <div class="list__product-item top__brand-item">
+                                <div class="list__product-item-img top__brand-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/brand/image_1648056802_53.png);"></div>
+                            </div>
+                        </div>
+                        <div class="col l-2 m-4 c-4">
+                            <div class="list__product-item top__brand-item">
+                                <div class="list__product-item-img top__brand-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/brand/image_1648056912_512.png);"></div>
+                            </div>
+                        </div>
+                        <div class="col l-2 m-4 c-4">
+                            <div class="list__product-item top__brand-item">
+                                <div class="list__product-item-img top__brand-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/brand/image_1648056901_437.png);"></div>
+                            </div>
+                        </div>
+                        <div class="col l-2 m-4 c-4">
+                            <div class="list__product-item top__brand-item">
+                                <div class="list__product-item-img top__brand-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/brand/image_1648056827_217.png);"></div>
+                            </div>
+                        </div>
+                        <div class="col l-2 m-4 c-4">
+                            <div class="list__product-item top__brand-item">
+                                <div class="list__product-item-img top__brand-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/brand/image_1648056817_528.png);"></div>
+                            </div>
+                        </div>
+                        <div class="col l-2 m-4 c-4">
+                            <div class="list__product-item top__brand-item">
+                                <div class="list__product-item-img top__brand-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/brand/image_1648056802_53.png);"></div>
+                            </div>
+                        </div>
+                        <div class="col l-2 m-4 c-4">
+                            <div class="list__product-item top__brand-item">
+                                <div class="list__product-item-img top__brand-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/brand/image_1648056912_512.png);"></div>
+                            </div>
+                        </div><div class="col l-2 m-4 c-4">
+                            <div class="list__product-item top__brand-item">
+                                <div class="list__product-item-img top__brand-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/brand/image_1648056901_437.png);"></div>
+                            </div>
+                        </div>
+                        <div class="col l-2 m-4 c-4">
+                            <div class="list__product-item top__brand-item">
+                                <div class="list__product-item-img top__brand-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/brand/image_1648056827_217.png);"></div>
+                            </div>
+                        </div>
+                        <div class="col l-2 m-4 c-4">
+                            <div class="list__product-item top__brand-item">
+                                <div class="list__product-item-img top__brand-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/brand/image_1648056817_528.png);"></div>
+                            </div>
+                        </div>
+                        <div class="col l-2 m-4 c-4">
+                            <div class="list__product-item top__brand-item">
+                                <div class="list__product-item-img top__brand-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/brand/image_1648056802_53.png);"></div>
+                            </div>
+                        </div>
+                        <div class="col l-2 m-4 c-4">
+                            <div class="list__product-item top__brand-item">
+                                <div class="list__product-item-img top__brand-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/brand/image_1648056912_512.png);"></div>
+                            </div>
+                        </div><div class="col l-2 m-4 c-4">
+                            <div class="list__product-item top__brand-item">
+                                <div class="list__product-item-img top__brand-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/brand/image_1648056901_437.png);"></div>
+                            </div>
+                        </div>
+                        <div class="col l-2 m-4 c-4">
+                            <div class="list__product-item top__brand-item">
+                                <div class="list__product-item-img top__brand-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/brand/image_1648056827_217.png);"></div>
+                            </div>
+                        </div>
+                        <div class="col l-2 m-4 c-4">
+                            <div class="list__product-item top__brand-item">
+                                <div class="list__product-item-img top__brand-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/brand/image_1648056817_528.png);"></div>
+                            </div>
+                        </div>
+                        <div class="col l-2 m-4 c-4">
+                            <div class="list__product-item top__brand-item">
+                                <div class="list__product-item-img top__brand-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/brand/image_1648056802_53.png);"></div>
+                            </div>
+                        </div>
+                        <div class="col l-2 m-4 c-4">
+                            <div class="list__product-item top__brand-item">
+                                <div class="list__product-item-img top__brand-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/brand/image_1648056912_512.png);"></div>
+                            </div>
+                        </div>
+                        <div class="col l-2 m-4 c-4">
+                            <div class="list__product-item top__brand-item">
+                                <div class="list__product-item-img top__brand-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/brand/image_1648056901_437.png);"></div>
+                            </div>
+                        </div>
+                        <div class="col l-2 m-4 c-4">
+                            <div class="list__product-item top__brand-item">
+                                <div class="list__product-item-img top__brand-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/brand/image_1648056827_217.png);"></div>
+                            </div>
+                        </div>
+                        <div class="col l-2 m-4 c-4">
+                            <div class="list__product-item top__brand-item">
+                                <div class="list__product-item-img top__brand-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/brand/image_1648056817_528.png);"></div>
+                            </div>
+                        </div>
+                        <div class="col l-2 m-4 c-4">
+                            <div class="list__product-item top__brand-item">
+                                <div class="list__product-item-img top__brand-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/brand/image_1648056802_53.png);"></div>
+                            </div>
+                        </div>
                         <div class="col l-2 m-4 c-4">
                             <div class="list__product-item top__brand-item">
                                 <div class="list__product-item-img top__brand-img" style="background-image: url(https://mcdn.nhanh.vn/store2/71503/brand/image_1648056912_512.png);"></div>
@@ -683,7 +858,7 @@
             </div>
         </div>
         <!-- Main Footer -->
-        <div class="grid wide__footer grid__padding">
+        <div class="grid wide wide__footer grid__padding">
             <div class="row">
                 <div class="col l-4 m-4 c-12">
                     <div class="footer__contact">
@@ -766,6 +941,20 @@
         </div>
     </footer>
 
+    <script
+    type="text/javascript"
+    src="https://code.jquery.com/jquery-1.11.0.min.js"
+    ></script>
+    <script
+    type="text/javascript"
+    src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+
     <script src="./assets/javascript/main.js"></script>
+
 </body>
 </html>

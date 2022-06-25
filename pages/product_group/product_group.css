@@ -1,0 +1,123 @@
+.news-header {
+    background-image: url(https://mcdn.nhanh.vn/store2/71503/bn/banner_trang_sp.png);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 62px 0;
+    margin-bottom: 40px;
+    background-size: cover;
+}
+.news-heading {
+    margin: 0;
+    font-size: 2.8rem;
+    font-weight: 400;
+    line-height: 3.4rem;
+    color: var(--text-color);
+}
+
+.news-header-list {
+    margin: 0;
+    padding: 15px 0 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.news-header-item i {
+    font-size: 1.4rem;
+    color: #707070;
+    margin-right: 10px;
+}
+
+.news-header-link {
+    text-decoration: none;
+    font-size: 1.4rem;
+    color: #707070;
+    font-weight: 300;
+}
+
+.news-header-label {
+    color: var(--primary-color);
+}
+
+
+/* ////////////// */
+.margin_bottom_30px {
+    margin-bottom: 30px;
+}
+
+.filter__tool-product {
+
+}
+
+.filter__tool-top {
+    border: 1px solid #91ad41;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+.filter__tool-tilte {
+    font-size: 2.4rem;
+    margin: 13px 0;
+    line-height: 1.2;
+    font-weight: 300;
+}
+
+.filter__tool-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 1.4rem;
+}
+
+.filter__tool-item {
+    padding-left: 20px;
+}
+
+.filter__tool-link {
+    text-decoration: none;
+    color: #212529;
+}
+
+.filter__tool-link:hover i {
+    background-color: #91ad41;
+    border-color: #91ad41;
+}
+
+.filter__tool-link i {
+    height: 14px;
+    width: 14px;
+    border-radius: 50%;
+    border: 1px solid #cdcfdd;
+    margin-right: 5px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.filter__tool-on-mobile {
+    display: flex;
+    align-items: center;
+
+    font-size: 1.4rem;
+    color: #212529;
+    margin: 10px 0;
+    padding: 2px 0;
+
+}
+
+.filter__tool-on-mobile span {
+    width: 30%;
+
+}
+
+.filter__tool-select {
+    width: 70%;
+}
+
+
+

@@ -1,8 +1,8 @@
-const $ = document.querySelector.bind(document);
-const $$ = document.querySelectorAll.bind(document);
+// const $ = document.querySelector.bind(document);
+// const $$ = document.querySelectorAll.bind(document);
 
 // **************** Scroll Window ****************\\
-var header = $('.header');
+var header = document.querySelector('.header');
 
 window.onscroll = function() {
     if(document.documentElement.scrollTop > 120) {
@@ -15,10 +15,9 @@ window.onscroll = function() {
 
 // **************** BarMenu on mobile & tablet ****************\\
 // //show and close bar menu
-var barMenu = $('.bar__menu');
-var barMenuBtn = $('.bar__menu-symbol');
-var barMenuModal = $('.bar__menu-modal');
-// console.log([barMenuBtn])
+var barMenu = document.querySelector('.bar__menu');
+var barMenuBtn = document.querySelector('.bar__menu-symbol');
+var barMenuModal = document.querySelector('.bar__menu-modal');
 
 barMenuBtn.onclick = function() {
     barMenu.style.transform = 'translate3d(0, 0, 0)';
@@ -35,11 +34,11 @@ barMenuModal.onclick = function(e) {
 }
 
 //show and hidden product list
-var barMenuList = $('.bar__menu-list');
-var barMenuProductList = $('.bar__menu-product-list');
-var barMenuProductBtnShow = $('.bar__menu-product');
-var barMenuProductBtnHidden = $('.bar__menu-product-left');
-// console.log(barMenuProductBtn)
+var barMenuList = document.querySelector('.bar__menu-list');
+var barMenuProductList = document.querySelector('.bar__menu-product-list');
+var barMenuProductBtnShow = document.querySelector('.bar__menu-product');
+var barMenuProductBtnHidden = document.querySelector('.bar__menu-product-left');
+
 barMenuProductBtnShow.onclick = function() {
     barMenuList.style.transform = 'translate3d(-20%, 0, 0)';
     barMenuProductList.style.transform = 'translate3d(0, 0, 0)';
@@ -51,16 +50,16 @@ barMenuProductBtnHidden.onclick = function() {
 }
 
 // **************** Register & Login on mobile & tablet ****************\\
-var containerApp = $('.container');
-var authForm = $('.auth__form');
-var loginForm = $('.login-form');
-var registerForm = $('.register-form');
-var loginFormBtn = $('.login-btn-js');
-var registerFormBtn = $('.register-btn-js');
-var headerUser = $('.header__user');
-var navIconUser = $('.user-nav-icon-js');
+var containerApp = document.querySelector('.container');
+var authForm = document.querySelector('.auth__form');
+var loginForm = document.querySelector('.login-form');
+var registerForm = document.querySelector('.register-form');
+var loginFormBtn = document.querySelector('.login-btn-js');
+var registerFormBtn = document.querySelector('.register-btn-js');
+var headerUser = document.querySelector('.header__user');
+var navIconUser = document.querySelector('.user-nav-icon-js');
 
-// console.log([loginForm])
+// // console.log([loginForm])
 
 navIconUser.onclick = function(e) {
     e.preventDefault();
@@ -76,37 +75,37 @@ navIconUser.onclick = function(e) {
     window.addEventListener('click', closeHeaderUser);
 }
 
-loginFormBtn.onclick = function(e) {
-    e.preventDefault();
-    containerApp.style.display = 'none';
-    headerUser.style.display = 'none';
-    loginForm.style.display = 'block';
-    registerForm.style.display = 'none';
+// loginFormBtn.onclick = function(e) {
+//     // e.preventDefault();
+//     containerApp.style.display = 'none';
+//     headerUser.style.display = 'none';
+//     loginForm.style.display = 'block';
+//     registerForm.style.display = 'none';
 
-    loginFormBtn.classList.add('btn--primary');
-    registerFormBtn.classList.remove('btn--primary');
+//     loginFormBtn.classList.add('btn--primary');
+//     registerFormBtn.classList.remove('btn--primary');
 
 
-    document.documentElement.scrollTop = 0;
+//     document.documentElement.scrollTop = 0;
 
-}
+// }
 
-registerFormBtn.onclick = function(e) {
-    e.preventDefault();
-    containerApp.style.display = 'none';
-    headerUser.style.display = 'none';
-    loginForm.style.display = 'none';
-    registerForm.style.display = 'block';
+// registerFormBtn.onclick = function(e) {
+//     // e.preventDefault();
+//     containerApp.style.display = 'none';
+//     headerUser.style.display = 'none';
+//     loginForm.style.display = 'none';
+//     registerForm.style.display = 'block';
 
-    loginFormBtn.classList.remove('btn--primary');
-    registerFormBtn.classList.add('btn--primary');
+//     loginFormBtn.classList.remove('btn--primary');
+//     registerFormBtn.classList.add('btn--primary');
 
-    document.documentElement.scrollTop = 0;
-}
+//     document.documentElement.scrollTop = 0;
+// }
 
 // **************** Bag product on mobile & tablet ****************\\
-var headerBag = $('.header__bag-js');
-var headerBagDescript = $('.header__bag-description');
+var headerBag = document.querySelector('.header__bag-js');
+var headerBagDescript = document.querySelector('.header__bag-description');
 
 
 headerBag.onclick = function(e) {
@@ -124,7 +123,7 @@ headerBag.onclick = function(e) {
 }
 
 // **************** Footer nav plus on mobile & tablet ****************\\
-var headerBags = $$('.footer__sub-heading');
+var headerBags = document.querySelectorAll('.footer__sub-heading');
 
 headerBags.forEach((headerBag) => {
     headerBag.onclick = function(e) {
@@ -137,7 +136,7 @@ headerBags.forEach((headerBag) => {
     }
 });
 
-var plusIcons = $$('.footer__plus-icon');
+var plusIcons = document.querySelectorAll('.footer__plus-icon');
 
 plusIcons.forEach(plusIcon => {
     plusIcon.onclick = function(e) {
@@ -153,9 +152,10 @@ plusIcons.forEach(plusIcon => {
     }
 })
 
+///////////////////////////////****************************************\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 // **************** List product filter on mobile ****************\\
-var productFilter = $('.list__product-on-mobile');
-var listClasifymobile = $('.list__product-classify-on-mobile');
+var productFilter = document.querySelector('.list__product-on-mobile');
+var listClasifymobile = document.querySelector('.list__product-classify-on-mobile');
 
 productFilter.onclick = function() {
     if(listClasifymobile.style.display === '') {
@@ -165,3 +165,129 @@ productFilter.onclick = function() {
         listClasifymobile.style.display = '';
     }
 }
+
+
+///////////////////////////////****************************************\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+// **************** Transition slider banner ****************\\
+
+const sliderMain = document.querySelector('.slider-main');
+const sliderItems = document.querySelectorAll('.slider-item');
+
+const sliderItemWidth = sliderItems[0].offsetWidth;
+const sliderLength = sliderItems.length;
+var count = 0;
+var alternate_flag = true;
+
+const handlePrevBtnClick = () => {
+    count = count - 1;
+
+    if(count >= 0) {
+        sliderMain.style.left = `${count*(-1) * sliderItemWidth}px`;
+    }else{
+        count = 0;
+    }
+}
+
+const handleNextBtnClick = () => {
+    count = count + 1;
+    if(count <= sliderLength - 1) {
+        sliderMain.style.left = `${count*(-1) * sliderItemWidth}px`;
+    }
+    else{
+        count = sliderLength - 1;
+    }
+}
+
+setInterval(() => {
+    if(alternate_flag) {
+        handleNextBtnClick();
+        if(count >= sliderLength - 1) {
+            alternate_flag = false;
+        }
+    }
+    else {
+        handlePrevBtnClick();
+        if(count <= 0) alternate_flag = true;
+    }
+}, 5000);
+
+// **************** Brand slick slider with frame work slick and jquery slider ****************\\
+$(document).ready(function(){
+    $('.about__us-slick-slider').slick({
+        slidesToShow: 4,
+        autoplay: true,
+        infinite: true,
+        autoplaySpeed: 1000,
+        dots: false,
+        arrows: false,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 2,
+                dots: true
+              },
+            },
+            {
+              breakpoint: 739,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true
+              },
+            },
+          ],
+    });
+
+    $('.hot__new-slick-slider').slick({
+        slidesToShow: 3,
+        slidesToScroll: 2,
+        autoplay: true,
+        infinite: true,
+        autoplaySpeed: 1000,
+        arrows: false,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 2,
+              },
+            },
+            {
+              breakpoint: 739,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: false,
+              },
+            },
+          ],
+    });
+
+    $('.brand__slick-slider').slick({
+        slidesToShow: 6,
+        slidesToScroll: 3,
+        autoplay: true,
+        infinite: true,
+        autoplaySpeed: 1000,
+        arrows: false,
+        // prevArrow: `<button type='button' class='slick-prev slick-arrow'>Prev</button>`,
+        // nextArrow: `<button type='button' class='slick-next slick-arrow'>Next</button>`,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 4,
+              },
+            },
+            {
+              breakpoint: 740,
+              settings: {
+                slidesToShow: 2,
+                infinite: false,
+              },
+            },
+          ],
+    });
+});
