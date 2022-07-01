@@ -155,61 +155,67 @@ plusIcons.forEach(plusIcon => {
 ///////////////////////////////****************************************\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 // **************** List product filter on mobile ****************\\
 var productFilter = document.querySelector('.list__product-on-mobile');
-var listClasifymobile = document.querySelector('.list__product-classify-on-mobile');
 
-productFilter.onclick = function() {
-    if(listClasifymobile.style.display === '') {
-        listClasifymobile.style.display = 'block';
-    }
-    else {
-        listClasifymobile.style.display = '';
+if(productFilter) {
+    var listClasifymobile = document.querySelector('.list__product-classify-on-mobile');
+    
+    productFilter.onclick = function() {
+        if(listClasifymobile.style.display === '') {
+            listClasifymobile.style.display = 'block';
+        }
+        else {
+            listClasifymobile.style.display = '';
+        }
     }
 }
-
 
 ///////////////////////////////****************************************\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 // **************** Transition slider banner ****************\\
 
 const sliderMain = document.querySelector('.slider-main');
-const sliderItems = document.querySelectorAll('.slider-item');
 
-const sliderItemWidth = sliderItems[0].offsetWidth;
-const sliderLength = sliderItems.length;
-var count = 0;
-var alternate_flag = true;
+if(sliderMain) {
+    const sliderItems = document.querySelectorAll('.slider-item');
 
-const handlePrevBtnClick = () => {
-    count = count - 1;
-
-    if(count >= 0) {
-        sliderMain.style.left = `${count*(-1) * sliderItemWidth}px`;
-    }else{
-        count = 0;
-    }
-}
-
-const handleNextBtnClick = () => {
-    count = count + 1;
-    if(count <= sliderLength - 1) {
-        sliderMain.style.left = `${count*(-1) * sliderItemWidth}px`;
-    }
-    else{
-        count = sliderLength - 1;
-    }
-}
-
-setInterval(() => {
-    if(alternate_flag) {
-        handleNextBtnClick();
-        if(count >= sliderLength - 1) {
-            alternate_flag = false;
+    const sliderItemWidth = sliderItems[0].offsetWidth;
+    const sliderLength = sliderItems.length;
+    var count = 0;
+    var alternate_flag = true;
+    
+    const handlePrevBtnClick = () => {
+        count = count - 1;
+    
+        if(count >= 0) {
+            sliderMain.style.left = `${count*(-1) * sliderItemWidth}px`;
+        }else{
+            count = 0;
         }
     }
-    else {
-        handlePrevBtnClick();
-        if(count <= 0) alternate_flag = true;
+    
+    const handleNextBtnClick = () => {
+        count = count + 1;
+        if(count <= sliderLength - 1) {
+            sliderMain.style.left = `${count*(-1) * sliderItemWidth}px`;
+        }
+        else{
+            count = sliderLength - 1;
+        }
     }
-}, 5000);
+    
+    setInterval(() => {
+        if(alternate_flag) {
+            handleNextBtnClick();
+            if(count >= sliderLength - 1) {
+                alternate_flag = false;
+            }
+        }
+        else {
+            handlePrevBtnClick();
+            if(count <= 0) alternate_flag = true;
+        }
+    }, 5000);
+}
+
 
 // **************** Brand slick slider with frame work slick and jquery slider ****************\\
 $(document).ready(function(){
@@ -259,7 +265,6 @@ $(document).ready(function(){
               settings: {
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                infinite: false,
               },
             },
           ],
@@ -285,9 +290,103 @@ $(document).ready(function(){
               breakpoint: 740,
               settings: {
                 slidesToShow: 2,
-                infinite: false,
               },
             },
           ],
     });
-});
+
+    $('.product-suggestion__slick-slider').slick({
+        slidesToShow: 4,
+        autoplay: true,
+        infinite: true,
+        autoplaySpeed: 1000,
+        arrows: false,
+        responsive: [
+            {
+              breakpoint: 1024,
+              settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+              },
+            },
+            {
+              breakpoint: 739,
+              settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+              },
+            },
+          ],
+    });
+
+}); 
+
+// **************** Handle all manipulate in Product Detail page ****************\\
+var productDetailsLinks = document.querySelectorAll('.product__detail-tab-link');
+var productOverview = document.getElementById('product-overview');
+var productDetail = document.getElementById('product-detail');
+var productComment = document.getElementById('product-comment');
+var tabContentPanes = document.querySelectorAll('.tab-content-pane');
+
+productDetailsLinks.forEach((productDetailsLink) => {
+    productDetailsLink.onclick = (e) => {
+        e.preventDefault(); 
+        // xóa các element đang active
+        document.querySelector('.product__detail-tab-item--active span').innerHTML = "&#xf077;";
+        document.querySelector('.product__detail-tab-item--active').classList.remove('product__detail-tab-item--active');
+        document.querySelector('.tab-content-pane--active').classList.remove('tab-content-pane--active');
+
+        // update lại trạng thái active của elment được click
+        e.target.parentElement.classList.add('product__detail-tab-item--active');
+        e.target.querySelector('span').innerHTML = "&#xf078;";  
+
+        tabContentPanes.forEach((tabContentPane) => {
+            if(e.target.href.includes(tabContentPane.id)) {
+                tabContentPane.classList.add('tab-content-pane--active');
+            }
+        })
+    }
+})
+
+// ///////////////
+var increaseBtn = document.querySelector('.product__detail-btn-increase');
+var decreaseBtn = document.querySelector('.product__detail-btn-decrease');
+var quantityInput = document.querySelector('.product__detail-number');
+var quantityOrder = 1;
+
+increaseBtn.onclick = () => {
+    quantityOrder++;
+    quantityInput.value = quantityOrder;
+}
+
+decreaseBtn.onclick = () => {
+    quantityOrder > 0 ? quantityOrder-- : quantityOrder = 0;
+    quantityInput.value = quantityOrder;
+}
+
+quantityInput.onchange = () => {
+    quantityOrder = quantityInput.value;
+    console.log(quantityOrder)
+}
+
+// ///////////////
+var classifyBtns = document.querySelectorAll('.product__detail-btn-classify');
+var isClassify = false;
+
+classifyBtns.forEach((classifyBtn) => {
+    classifyBtn.onclick = (e) => {
+        if(e.target.classList.contains('product__detail-btn-classify--chosen')) {
+            document.querySelector('.product__detail-btn-classify--chosen').classList.remove('product__detail-btn-classify--chosen');
+        }
+        else {
+            if(document.querySelector('.product__detail-btn-classify--chosen')) {
+                document.querySelector('.product__detail-btn-classify--chosen').classList.remove('product__detail-btn-classify--chosen');
+            }
+            e.target.classList.add('product__detail-btn-classify--chosen');
+        }
+    }
+})
+
+
+
+

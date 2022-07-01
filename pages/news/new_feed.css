@@ -50,6 +50,8 @@
     flex-direction: column;
     align-items: center;
     margin-bottom: 30px;
+    text-decoration: none;
+    color: #212529;
 }
 
 .news-header-wrapper:hover {
@@ -59,11 +61,6 @@
 
 .news-header-blog {
     position: relative;
-}
-
-.news-header-blog-link {
-    display: block;
-    text-decoration: none;
 }
 
 .news-header-img {

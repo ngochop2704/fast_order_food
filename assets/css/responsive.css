@@ -219,6 +219,16 @@
         padding: 5px;
     }
 
+    /* ////////////////// Zoom image in detail Product /////////////////// */
+    #myimage {
+        height: 345px;
+    }
+
+    .piclist li img {
+        width: 54px;
+    }
+
+
 }
 
 /* Tablet */
@@ -285,6 +295,14 @@
     .filter__tool-list {
         justify-content: flex-start;
         padding: 8px 0 15px;
+    }
+
+    /* ////////////////// Zoom image in detail Product /////////////////// */
+    .product__detail-btn-add {
+        min-width: 50%;
+    }
+    .product__detail-tab-link {
+        margin: 0 30px;
     }
 
 }
@@ -409,9 +427,9 @@
 
     /* ////////////////// news_blog /////////////////// */
     .news-heading {
-    font-size: 4rem;
-    line-height: 4.3rem;
-    font-weight: 300;
+    font-size: 2.8rem;
+    line-height: 4rem;
+    font-weight: 400;
     text-align: center;
     margin: 0 10px;
     }
@@ -419,6 +437,69 @@
     .blog__social_media {
         margin: 20px 0px;
     }
+
+    /* ////////////////// Zoom image in detail Product /////////////////// */
+    .product__detail-name {
+        margin: 20px 0 10px;
+    }
+
+    .product__detail-btn-add {
+        min-width: 100%;
+    }
+
+    .product__detail-feature {
+        padding-left: 40px;
+    }
+
+    .product__detail-tab {
+        width: 100%;
+        padding: 0;
+        margin: 40px 0 0 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        border-bottom: 1px solid #ebebeb;
+    }
+
+    .product__detail-tab-item {
+        width: 100%;
+        border: 1px solid #ebebeb;
+        margin-bottom: 5px;
+        color: #212529;
+    }
+
+    .product__detail-tab-link {
+        text-decoration: none;
+        font-size: 1.7rem;
+        font-weight: 500;
+        line-height: 1.5;
+        color: currentColor;
+        display: block;
+        padding: 8px 16px;
+        margin: 0;
+    }
+
+    .product__detail-tab-item span {
+        display: block;
+        float: right;
+        font-size: 1.4rem;
+        font-weight: 500;
+        color: currentColor;
+        -webkit-font-smoothing: antialiased;
+        font-family:'FontAwesome';
+        -webkit-text-stroke: 1.5px ;
+    }
+   
+    .product__detail-tab-item--active {
+        color: #91ad41;
+        border-bottom: 2px solid #91ad41;
+    }
+
+    .product__detail-tab-item--active .product__detail-tab-link::after {
+        display: none;
+    }
+
 }
 
 /* PC & Tablet */
